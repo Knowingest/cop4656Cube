@@ -50,8 +50,36 @@ UNDERSTANDING THE CUBE:
   If an edge is already in the second layer, but oriented incorrectly, put any other edge in its location to move it to the top layer.
  
 4. ORIENT LAST LAYER EDGES
+  
+  Now we need all the yellow edges to have their yellow sticker facing upwards.
 
   Look at the top layer.  If you see four yellow edges facing upwards, you're done with this step.
   Otherwise, you'll have either two or zero yellow edges facing upwards.
+  If possible, orient the top layer as shown into one of the cases shown, and perform the appropriate algorithm.
   
-  more to come later
+5. ORIENT LAST LAYER CORNERS
+
+  Now we need to get all of the yellow corners facing yellow side up.
+  You'll see either zero, one, or two yellow corners facing up.  If you have four corners up, you're already done!
+  If you have one yellow corner, place it in the lower left corner and perform the Sune algorithm.
+  This might need to be done multiple times!
+  If you have zero or two corners facing up, orient the top layer until a yellow sticker is facing either of the two ways shown
+  in the diagram, and then perform the Sune.
+  
+6.
+
+  PERMUTE LAST LAYER CORNERS
+  
+  Look for what cubers call "headlights".  Find a side of the top layer where both the corners have matching colors.
+  Orient the top layer so that the "headlights" are facing the back, and perform the algorithm.
+  If you don't have any headlights, perform the algorithm from any orientation in order to get them, then proceed as normal.
+  Once all four sides have "headlights", you're done!
+  
+7.
+
+  PERMUTE LAST LAYER EDGES
+  
+  See if any sides have all three stickers matching.
+  If so, place that side in the back and perform the algorithm until the cube is solved!
+  (You might need to do the algorithm twice)
+  If you don't have any side with three matching stickers, do the algorithm from any orientation, then look again.
