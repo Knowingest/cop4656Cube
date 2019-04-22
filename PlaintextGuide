@@ -1,0 +1,57 @@
+UNDERSTANDING THE CUBE:
+
+  Some things to remember:
+  * A Rubik's cube only has one solution!
+  * That means every piece has a specific place it needs to be.
+  * This means there aren't any duplicate pieces
+  * The center pieces never move relative to each other!
+  * Corners will always be corners, and edges will always be edges.
+  * It isn't so much a "cube of cubes" as much as it is a 3d puzzle with 8 corners and 12 edges
+  
+ STARTING TO SOLVE:
+ 
+  We're going to build the cube step by step, the same way every time.
+  We'll start by completing one side, then slowly fill in the rest of the cube.
+  * For consistency, always start with the side that has the WHITE center piece
+  * If you ever mess up, go back to whichever step necessary to re-build the cube to where it was
+  * The goal is to move pieces to their 'correct' or 'solved' positions
+
+1. THE CROSS
+
+  The first step is to find the white center piece, and put the appropriate white edge pieces next to it.
+  This will make what we call a white 'cross'.  It will look like a plus sign!
+  
+  * Don't just put the edges white-side-up, make sure they're in the correct spots!
+  * Example:  There is only one edge that is both white and red, so it needs to go between the white and red center pieces.
+  * Red goes opposite orange, and green is opposite blue.  
+  * Yellow is opposite white, which means we'll save all the yellow pieces for last!
+  * This step is largely intuitive, which means you can figure it out like a puzzle.
+  * When all four white edges are in the correct spots, move to step 2!
+  
+ 2. WHITE CORNERS
+ 
+  Now that the cross is complete, we have to fill in the white corners in order to finish this layer.
+  Place the white side with the cross facing downwards, and look for where the white corners are.
+  Place a white corner above the spot where it needs to go, and look at the algorithms listed
+  Based on which way the white sticker is facing, do the appropriate algorithm to place the corner in the correct spot.
+  If one of the white corners is already in the bottom layer but oriented incorrectly, perform any of these algorithms to move it out.
+  
+  * "Where is the correct place for a corner to go?"
+  * EXAMPLE: If you were looking at the WHITE/RED/BLUE corner, it would need to go inbetween the white red and blue center pieces.
+    So place it on the top layer inbetween the red and blue sides.  Then perform the algorithm necessary.
+    
+3. SECOND LAYER EDGES
+
+  Now that the first layer is complete, make sure it's aligned so that the edges match up with the center pieces on the second layer.
+  Then, we'll insert the second layer edges in order to complete the second layer.
+  Locate any edge in the top layer that doesn't have a yellow sticker.
+  Orient the edge until its outward facing sticker is touching the matching colored center piece.
+  Then, perform the appropriate algorithm to move the edge to its solved position.
+  If an edge is already in the second layer, but oriented incorrectly, put any other edge in its location to move it to the top layer.
+ 
+4. ORIENT LAST LAYER EDGES
+
+  Look at the top layer.  If you see four yellow edges facing upwards, you're done with this step.
+  Otherwise, you'll have either two or zero yellow edges facing upwards.
+  
+  more to come later
