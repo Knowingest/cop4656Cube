@@ -32,7 +32,7 @@ UNDERSTANDING THE CUBE:
  
   Now that the cross is complete, we have to fill in the white corners in order to finish this layer.
   Place the white side with the cross facing downwards, and look for where the white corners are.
-  Place a white corner above the spot where it needs to go, and look at the algorithms listed
+  Once you've found a white corner, orient it between the correct faces as shown.
   Based on which way the white sticker is facing, do the appropriate algorithm to place the corner in the correct spot.
   If one of the white corners is already in the bottom layer but oriented incorrectly, perform any of these algorithms to move it out.
   
