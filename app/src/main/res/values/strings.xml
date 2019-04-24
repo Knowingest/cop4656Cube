@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RubiksCube</string>
+    <string name="learnButton">Learn</string>
+    <string name="playButton">Play</string>
 </resources>
