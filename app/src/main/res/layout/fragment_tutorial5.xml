@@ -9,8 +9,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".Tutorial3Fragment">
+        tools:context=".Tutorial5Fragment">
 
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/step2Body"
+            android:padding="10dp"
+            android:text="@string/tutorial53"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <TextView
             android:id="@+id/textView2"
@@ -21,19 +34,21 @@
             android:layout_toStartOf="@+id/nextBtn"
             android:layout_toEndOf="@+id/prevBtn"
             android:gravity="center"
-            android:text="@string/step3Title"
+            android:text="@string/step5Title"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView2"
+            android:layout_below="@+id/firstTextOnFive"
+            android:layout_alignParentStart="false"
             android:layout_alignParentEnd="false"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="15dp"
             android:contentDescription="@string/step2image"
-            android:src="@drawable/edges_arrows" />
+            android:scaleType="centerInside"
+            android:src="@drawable/fivepart1" />
 
         <TextView
             android:id="@+id/textView3"
@@ -45,7 +60,7 @@
             android:layout_marginTop="5dp"
             android:contentDescription="@string/step2Body"
             android:padding="10dp"
-            android:text="@string/tutorial3"
+            android:text="@string/tutorial52"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <ImageButton
@@ -71,6 +86,39 @@
             android:maxHeight="42dp"
             android:scaleType="fitXY"
             android:src="@drawable/nextbuttonbig" />
+
+        <TextView
+            android:id="@+id/firstTextOnFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentStart="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:text="@string/tutorial51"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="243dp"
+            android:src="@drawable/corners0yellow" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="90dp"
+            android:src="@drawable/corners2yellow" />
 
 
     </RelativeLayout>

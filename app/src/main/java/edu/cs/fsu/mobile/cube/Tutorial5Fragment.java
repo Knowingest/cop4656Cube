@@ -12,11 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 
-public class Tutorial3Fragment extends Fragment {
+public class Tutorial5Fragment extends Fragment {
 
     View v;
 
-    public Tutorial3Fragment() {
+    public Tutorial5Fragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class Tutorial3Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_tutorial3, container, false);
+        v = inflater.inflate(R.layout.fragment_tutorial5, container, false);
         configureImageButtons();
         return v;
     }
@@ -38,20 +38,6 @@ public class Tutorial3Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Fragment fragment = new Tutorial2Fragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.stepFrame, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
-
-        nextBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
                 Fragment fragment = new Tutorial4Fragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -60,6 +46,20 @@ public class Tutorial3Fragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+//        nextBtn.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//
+//                Fragment fragment = new Tutorial5Fragment();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.stepFrame, fragment);
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
+//            }
+//        });
     }
 
 }

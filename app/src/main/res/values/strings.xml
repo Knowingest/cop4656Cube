@@ -5,4 +5,32 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="step1Title">Step 1 : \nThe Cross</string>
+    <string name="tutorial1">The first step is to find the white center piece, and put the appropriate white edge pieces next to it.\nThis will make what we call a white \'cross\'.  It will look like a plus sign!\n* Don\'t just put the edges white-side-up, make sure they\'re in the correct spots!</string>
+    <string name="tutorial1Example">There is only one edge that is both white and red, so it needs to go between the white and red center pieces.\n&#8226; Red goes opposite orange, and green is opposite blue.\n&#8226; Yellow is opposite white, which means we\'ll save all the yellow pieces for last!\n&#8226; This step is largely intuitive, which means you can figure it out like a puzzle.\n&#8226; When all four white edges are in the correct spots, move to step 2!</string>
+    <string name="step2Title">Step 2 : \nWhite Corners</string>
+    <string name="tutorial2">&#8226; Now that the cross is complete, we have to fill in the white corners in order to finish this layer.\n&#8226; Place the white side with the cross facing downwards, and look for where the white corners are.\n&#8226; Once you\'ve found a white corner, orient it between the correct faces as shown.\n&#8226; Based on which way the white sticker is facing, do the appropriate algorithm to place the corner in the correct spot.\n&#8226; If one of the white corners is already in the bottom layer but oriented incorrectly, perform any of these algorithms to move it out.</string>
+    <string name="example">Example</string>
+    <string name="tutorial2Example">If you were looking at the WHITE/RED/BLUE corner, it would need to go in between the white red and blue center pieces. So place it on the top layer in between the red and blue sides. Then perform the algorithm necessary.</string>
+    <string name="step2image">This is the one and only image for step 2</string>
+    <string name="step2Body">The primary body text for step two</string>
+    <string name="prev">Button to go to the previous page</string>
+    <string name="next">Button to go to the next page</string>
+    <string name="step3Title">Step 3 :\nSecond Layer Edges</string>
+    <string name="tutorial3">&#8226; Now that the first layer is complete, make sure it\'s aligned so that the edges match up with the center pieces on the second layer.\n&#8226; Then, we\'ll insert the second layer edges in order to complete the second layer.\n&#8226; Locate any edge in the top layer that doesn\'t have a yellow sticker.\n&#8226; Orient the edge until its outward facing sticker is touching the matching colored center piece.\n&#8226; Then, perform the appropriate algorithm to move the edge to its solved position.\n&#8226; If an edge is already in the second layer, but oriented incorrectly, put any other edge in its location to move it to the top layer.</string>
+    <!--<string name="tutorial3Example"></string>-->
+    <string name="step4Title">Step 4 :\nOrient Last Layer Edges</string>
+    <string name="tutorial4">Now we need all the yellow edges to have their yellow sticker facing upwards.\n&#8226; Look at the top layer.  If you see four yellow edges facing upwards, you\'re done with this step.\n&#8226; Otherwise, you\'ll have either two or zero yellow edges facing upwards.\n&#8226; If possible, orient the top layer as shown into one of the cases shown, and perform the appropriate algorithm.</string>
+    <!--<string name="tutorial4Example"></string>-->
+    <string name="step5Title">Step 5 :\nOrient Last Layer Corners</string>
+    <string name="tutorial51">&#8226; Now we need to get all of the yellow corners facing yellow side up./n&#8226; You\'ll see either zero, one, or two yellow corners facing up.  If you have four corners up, you\'re already done!</string>
+    <string name="tutorial52">&#8226; If you have one yellow corner, place it in the lower left corner and perform the Sune algorithm.\n&#8226; This might need to be done multiple times!</string>
+    <string name="tutorial53">&#8226; If you have zero or two corners facing up, orient the top layer until a yellow sticker is facing either of the two ways shown in the diagram, and then perform the Sune.</string>
+    <!--<string name="tutorial5Example"></string>-->
+    <string name="step6Title">Step 6 :\nPermute Last Layer Corners</string>
+    <string name="tutorial6"></string>
+    <string name="tutorial6Example"></string>
+    <string name="step7Title">Step 7 :\nPermute Last Layer Edges</string>
+    <string name="tutorial7"></string>
+    <string name="tutorial7Example"></string>
 </resources>

@@ -507,6 +507,12 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="460dp" />
 
+    <Button
+        android:id="@+id/mainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:text="Main Menu" />
 
 
 </RelativeLayout>
