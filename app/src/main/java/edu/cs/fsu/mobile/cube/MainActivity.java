@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button LearnButton;
     Button PlayButton;
+    Button exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "clicked the Play Button");
             }
         });
+        exit = (Button) findViewById(R.id.exit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(1);
+            }
+        });
 
-//
     }
 
 

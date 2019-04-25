@@ -28,6 +28,13 @@
         android:background="#FFFFFF"
         android:text="@string/playButton"
         android:textColor="#0000FF" />
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="43dp"
+        android:layout_height="35dp"
+        android:text="X"
+        android:textColor="#0000FF"
+        android:background="#FFFFFF"/>
 </RelativeLayout>
 
 
