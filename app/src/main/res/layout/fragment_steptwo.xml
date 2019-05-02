@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".steptwo">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/d3"
+        android:layout_width="326dp"
+        android:layout_height="136dp"
+        android:src="@drawable/steptwo"
+        app:srcCompat="@drawable/steptwo" />
+
+    <ImageButton
+        android:id="@+id/steponeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nextbutton"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="70dp"
+        android:background="#FFFFFF"/>
+
+</FrameLayout>

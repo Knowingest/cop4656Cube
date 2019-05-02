@@ -46,7 +46,7 @@ public class TutorialActivity extends AppCompatActivity {
                     Log.i(TAG, "did it load?");
                     break;
                 case 3:
-                    Log.i(TAG, "sorry, no fragment for three created yet.");
+                    Log.i(TAG, "yay, selected step three, let's load that fragment!");
                     fragment = new Tutorial3Fragment();
                     fragmentTransaction.replace(R.id.stepFrame, fragment);
                     fragmentTransaction.addToBackStack(null);
@@ -63,6 +63,19 @@ public class TutorialActivity extends AppCompatActivity {
                     fragmentTransaction.replace(R.id.stepFrame, fragment);
                     fragmentTransaction.addToBackStack(null);
                     fragmentTransaction.commit();
+                    break;
+                case 6:
+                    fragment = new Tutorial6Fragment();
+                    fragmentTransaction.replace(R.id.stepFrame, fragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                    break;
+                case 7:
+                    fragment = new Tutorial7Fragment();
+                    fragmentTransaction.replace(R.id.stepFrame, fragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                    break;
                 default:
                     Log.i(TAG, "the default");
                     break;

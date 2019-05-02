@@ -52,7 +52,7 @@ public class Tutorial5Fragment extends Fragment {
 //            @Override
 //            public void onClick(View v) {
 //
-//                Fragment fragment = new Tutorial5Fragment();
+//                Fragment fragment = new Tutorial6Fragment();
 //                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
 //                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 //                fragmentTransaction.replace(R.id.stepFrame, fragment);
