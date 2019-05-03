@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 
-public class Tutorial1Fragment extends Fragment {
+public class Tutorial02Fragment extends Fragment {
 
     private static final String TAG = "fragment";
 
     View v;
 
-    public Tutorial1Fragment() {
+    public Tutorial02Fragment() {
         // Required empty public constructor
     }
 
@@ -27,7 +27,7 @@ public class Tutorial1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_tutorial1, container, false);
+        v = inflater.inflate(R.layout.fragment_tutorial02, container, false);
         configureImageButtons();
         return v;
     }
@@ -40,8 +40,8 @@ public class Tutorial1Fragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-               // Log.i(TAG, "this button does nothing for now");
-                Fragment fragment = new Tutorial02Fragment();
+                // Log.i(TAG, "this button does nothing for now");
+                Fragment fragment = new Tutorial01Fragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.stepFrame, fragment);
@@ -55,7 +55,7 @@ public class Tutorial1Fragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Fragment fragment = new Tutorial2Fragment();
+                Fragment fragment = new Tutorial1Fragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.stepFrame, fragment);

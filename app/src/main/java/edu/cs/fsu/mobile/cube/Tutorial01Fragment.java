@@ -13,13 +13,13 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 
-public class Tutorial1Fragment extends Fragment {
+public class Tutorial01Fragment extends Fragment {
 
     private static final String TAG = "fragment";
 
     View v;
 
-    public Tutorial1Fragment() {
+    public Tutorial01Fragment() {
         // Required empty public constructor
     }
 
@@ -27,7 +27,7 @@ public class Tutorial1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        v = inflater.inflate(R.layout.fragment_tutorial1, container, false);
+        v = inflater.inflate(R.layout.fragment_tutorial01, container, false);
         configureImageButtons();
         return v;
     }
@@ -36,26 +36,26 @@ public class Tutorial1Fragment extends Fragment {
         ImageButton prevBtn = (ImageButton) v.findViewById(R.id.prevBtn);
         ImageButton nextBtn = (ImageButton) v.findViewById(R.id.nextBtn);
 
-        prevBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-               // Log.i(TAG, "this button does nothing for now");
-                Fragment fragment = new Tutorial02Fragment();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.stepFrame, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
+//        prevBtn.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                // Log.i(TAG, "this button does nothing for now");
+//                Fragment fragment = new Tutorial01Fragment();
+//                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.stepFrame, fragment);
+//                fragmentTransaction.addToBackStack(null);
+//                fragmentTransaction.commit();
+//            }
+//        });
 
         nextBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                Fragment fragment = new Tutorial2Fragment();
+                Fragment fragment = new Tutorial02Fragment();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.stepFrame, fragment);

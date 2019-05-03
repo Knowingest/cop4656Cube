@@ -5,6 +5,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="introTitle">Intro to Cubing</string>
+    <string name="introSubtitle1">Some Tips Before We Begin :</string>
+    <string name="intro1">&#8226; A Rubik\'s cube only has one solution!\n\t\t&#8226; Every piece has a specific place it needs to be.\n\t\t&#8226; There aren\'t any duplicate pieces.\n&#8226; The center pieces never move relative to each other!\n&#8226; Corners will always be corners, and edges will always be edges.\n&#8226; It isn\'t so much a "cube of cubes" as much as it is a 3d puzzle with 8 corners and 12 edges</string>
+    <string name="introSubtitle2">Starting To Solve :</string>
+    <string name="intro2">  We\'re going to build the cube step by step, the same way every time. We\'ll start by completing one side, then slowly fill in the rest of the cube.\n\n&#8226; For consistency, always start with the side that has the WHITE center piece.\n&#8226; If you ever mess up, go back to whichever step necessary to re-build the cube to where it was.\n&#8226; The goal is to move pieces to their \'correct\' or \'solved\' positions</string>
+    <string name="notationTitle">Cube Move Notation</string>
+    <!--<string name="notationText"></string>-->
     <string name="step1Title">Step 1 : \nThe Cross</string>
     <string name="tutorial1">The first step is to find the white center piece, and put the appropriate white edge pieces next to it.\nThis will make what we call a white \'cross\'.  It will look like a plus sign!\n* Don\'t just put the edges white-side-up, make sure they\'re in the correct spots!</string>
     <string name="tutorial1Example">There is only one edge that is both white and red, so it needs to go between the white and red center pieces.\n&#8226; Red goes opposite orange, and green is opposite blue.\n&#8226; Yellow is opposite white, which means we\'ll save all the yellow pieces for last!\n&#8226; This step is largely intuitive, which means you can figure it out like a puzzle.\n&#8226; When all four white edges are in the correct spots, move to step 2!</string>
@@ -23,14 +30,16 @@
     <string name="tutorial4">Now we need all the yellow edges to have their yellow sticker facing upwards.\n&#8226; Look at the top layer.  If you see four yellow edges facing upwards, you\'re done with this step.\n&#8226; Otherwise, you\'ll have either two or zero yellow edges facing upwards.\n&#8226; If possible, orient the top layer as shown into one of the cases shown, and perform the appropriate algorithm.</string>
     <!--<string name="tutorial4Example"></string>-->
     <string name="step5Title">Step 5 :\nOrient Last Layer Corners</string>
-    <string name="tutorial51">&#8226; Now we need to get all of the yellow corners facing yellow side up./n&#8226; You\'ll see either zero, one, or two yellow corners facing up.  If you have four corners up, you\'re already done!</string>
+    <string name="tutorial51">&#8226; Now we need to get all of the yellow corners facing yellow side up.\n&#8226; You\'ll see either zero, one, or two yellow corners facing up.  If you have four corners up, you\'re already done!</string>
     <string name="tutorial52">&#8226; If you have one yellow corner, place it in the lower left corner and perform the Sune algorithm.\n&#8226; This might need to be done multiple times!</string>
     <string name="tutorial53">&#8226; If you have zero or two corners facing up, orient the top layer until a yellow sticker is facing either of the two ways shown in the diagram, and then perform the Sune.</string>
     <!--<string name="tutorial5Example"></string>-->
     <string name="step6Title">Step 6 :\nPermute Last Layer Corners</string>
-    <string name="tutorial6"></string>
-    <string name="tutorial6Example"></string>
+    <string name="tutorial6">&#8226; Look for what cubers call "headlights".\n&#8226; Find a side of the top layer where both the corners have matching colors.\n&#8226; Orient the top layer so that the "headlights" are facing the back, and perform the algorithm.\n&#8226; If you don\'t have any headlights, perform the algorithm from any orientation in order to get them, then proceed as normal.\n&#8226; Once all four sides have "headlights", you\'re done!</string>
+    <string name="algorithm6">R\' F R\' B2 R F\' R\' B2 R2</string>
+    <!--<string name="tutorial6Example"></string>-->
     <string name="step7Title">Step 7 :\nPermute Last Layer Edges</string>
-    <string name="tutorial7"></string>
-    <string name="tutorial7Example"></string>
+    <string name="tutorial7">&#8226; See if any sides have all three stickers matching.\n&#8226; If so, place that side in the back and perform the algorithm until the cube is solved! (You might need to do the algorithm twice)\n&#8226; If you don\'t have any side with three matching stickers, do the algorithm from any orientation, then look again.</string>
+    <string name="algorithm7">(R U\') (R U) (R U) (R U\') R\' U\' R2</string>
+    <!--<string name="tutorial7Example"></string>-->
 </resources>
