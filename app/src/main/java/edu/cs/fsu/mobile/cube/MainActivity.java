@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button LearnButton;
     Button PlayButton;
+    Button TutorialButton;
     Button exit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,22 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "clicked the Play Button");
             }
         });
+
+        TutorialButton = findViewById(R.id.TutorialButton);
+        TutorialButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
+//                String step_number = "one";
+//                intent.putExtra("STEP_NUMBER", step_number);
+                Bundle mBundle = new Bundle();
+                mBundle.putInt("step", 0);
+                intent.putExtras(mBundle);
+                startActivity(intent);
+                Log.i(TAG, "clicked the Tutorial Button");
+            }
+        });
+
         exit = (Button) findViewById(R.id.exit);
         exit.setOnClickListener(new View.OnClickListener() {
             @Override

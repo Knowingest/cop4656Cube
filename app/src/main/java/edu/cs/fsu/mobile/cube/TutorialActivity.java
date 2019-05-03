@@ -28,6 +28,14 @@ public class TutorialActivity extends AppCompatActivity {
             int stepNumber = extras.getInt("step", 0);
 
             switch(stepNumber){
+                case 0:
+                    Log.i(TAG, "0");
+                    fragment = new Tutorial01Fragment();
+                    fragmentTransaction.replace(R.id.stepFrame, fragment);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                    Log.i(TAG, "did it load?");
+                    break;
                 case 1:
                     Log.i(TAG, "sorry, no fragment for one created yet.");
                     fragment = new Tutorial1Fragment();
