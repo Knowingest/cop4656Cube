@@ -41,5 +41,6 @@
     <string name="step7Title">Step 7 :\nPermute Last Layer Edges</string>
     <string name="tutorial7">&#8226; See if any sides have all three stickers matching.\n&#8226; If so, place that side in the back and perform the algorithm until the cube is solved! (You might need to do the algorithm twice)\n&#8226; If you don\'t have any side with three matching stickers, do the algorithm from any orientation, then look again.</string>
     <string name="algorithm7">(R U\') (R U) (R U) (R U\') R\' U\' R2</string>
+    <string name="timerStartValue">00 : 00 : 00</string>
     <!--<string name="tutorial7Example"></string>-->
 </resources>

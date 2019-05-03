@@ -2,13 +2,65 @@ package edu.cs.fsu.mobile.cube;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-public class PlayActivity extends AppCompatActivity {
+public class PlayActivity extends AppCompatActivity{
+
+    //gives cardinal direction of movement
+    enum Direction{
+        UP, DOWN, LEFT, RIGHT;
+    }
+
+    enum Side{
+        F, R, U, L, B, D;
+    }
+
+    //stores data for a single movement (or swipe)
+    public class Movement{
+        public float initPosX, initPosY;
+        public float finalPosX, finalPosY;
+        public float dirVal;
+        Direction d;
+        Movement(){
+            initPosX = initPosY = finalPosX = finalPosY = dirVal = 0;
+        }
+        Direction evalDirection(float iX, float iY, float fX, float fY){
+            Direction d = null;
+            dirVal = (float) Math.atan( (finalPosY - initPosY)/(finalPosX - initPosX) );
+            dirVal = (float) Math.toDegrees(dirVal);
+            //Toast.makeText(getApplicationContext(), "DirVal: " + dirVal, Toast.LENGTH_SHORT).show();
+            if (finalPosY < initPosY && ((dirVal > 45 && dirVal <= 90) || (dirVal < -45 && dirVal >= -90))){
+                //set to UP
+                Toast.makeText(getApplicationContext(), "UP", Toast.LENGTH_SHORT).show();
+                d = Direction.UP;
+            }
+            else if (finalPosX < initPosX && (dirVal > -45 && dirVal < 45)){
+                Toast.makeText(getApplicationContext(), "LEFT", Toast.LENGTH_SHORT).show();
+                //set to LEFT
+                d = Direction.LEFT;
+            }
+            if (finalPosY > initPosY && ((dirVal > 45 && dirVal <= 90) || (dirVal < -45 && dirVal >= -90))){
+                Toast.makeText(getApplicationContext(), "DOWN", Toast.LENGTH_SHORT).show();
+                //set to DOWN
+                d = Direction.DOWN;
+            }
+            else if (finalPosX > initPosX && (dirVal > -45 && dirVal < 45)){
+                Toast.makeText(getApplicationContext(), "RIGHT", Toast.LENGTH_SHORT).show();
+                //set to RIGHT
+                d = Direction.RIGHT;
+            }
+            return d;
+        }
+    }
+
+    private Movement myMove = new Movement();
 
     Cube cube;
     Button main;
@@ -20,6 +72,141 @@ public class PlayActivity extends AppCompatActivity {
         cube = new Cube();
         cube.scramble();
         refresh();
+
+        View.OnTouchListener touch = new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent me) {
+                switch(me.getAction()){
+                    case MotionEvent.ACTION_DOWN:
+                        myMove.initPosX = me.getRawX();
+                        myMove.initPosY = me.getRawY();
+                        return true;
+                    case MotionEvent.ACTION_UP:
+                        myMove.finalPosX = me.getRawX();
+                        myMove.finalPosY = me.getRawY();
+                        myMove.d = myMove.evalDirection(myMove.initPosX, myMove.finalPosX, myMove.initPosY, myMove.finalPosY);
+
+                        break;
+                }
+                return false;
+            }
+        };
+
+        //set touch listeners for all image views
+        ImageView u9 = (ImageView) findViewById(R.id.u9);
+        u9.setOnTouchListener(touch);
+        ImageView u8 = (ImageView) findViewById(R.id.u8);
+        u8.setOnTouchListener(touch);
+        ImageView u7 = (ImageView) findViewById(R.id.u7);
+        u7.setOnTouchListener(touch);
+        ImageView u6 = (ImageView) findViewById(R.id.u6);
+        u6.setOnTouchListener(touch);
+        ImageView u5 = (ImageView) findViewById(R.id.u5);
+        u5.setOnTouchListener(touch);
+        ImageView u4 = (ImageView) findViewById(R.id.u4);
+        u4.setOnTouchListener(touch);
+        ImageView u3 = (ImageView) findViewById(R.id.u3);
+        u3.setOnTouchListener(touch);
+        ImageView u2 = (ImageView) findViewById(R.id.u2);
+        u2.setOnTouchListener(touch);
+        ImageView u1 = (ImageView) findViewById(R.id.u1);
+        u1.setOnTouchListener(touch);
+
+        ImageView f9 = (ImageView) findViewById(R.id.f9);
+        f9.setOnTouchListener(touch);
+        ImageView f8 = (ImageView) findViewById(R.id.f8);
+        f8.setOnTouchListener(touch);
+        ImageView f7 = (ImageView) findViewById(R.id.f7);
+        f7.setOnTouchListener(touch);
+        ImageView f6 = (ImageView) findViewById(R.id.f6);
+        f6.setOnTouchListener(touch);
+        ImageView f5 = (ImageView) findViewById(R.id.f5);
+        f5.setOnTouchListener(touch);
+        ImageView f4 = (ImageView) findViewById(R.id.f4);
+        f4.setOnTouchListener(touch);
+        ImageView f3 = (ImageView) findViewById(R.id.f3);
+        f3.setOnTouchListener(touch);
+        ImageView f2 = (ImageView) findViewById(R.id.f2);
+        f2.setOnTouchListener(touch);
+        ImageView f1 = (ImageView) findViewById(R.id.f1);
+        f1.setOnTouchListener(touch);
+
+        ImageView l9 = (ImageView) findViewById(R.id.l9);
+        l9.setOnTouchListener(touch);
+        ImageView l8 = (ImageView) findViewById(R.id.l8);
+        l8.setOnTouchListener(touch);
+        ImageView l7 = (ImageView) findViewById(R.id.l7);
+        l7.setOnTouchListener(touch);
+        ImageView l6 = (ImageView) findViewById(R.id.l6);
+        l6.setOnTouchListener(touch);
+        ImageView l5 = (ImageView) findViewById(R.id.l5);
+        l5.setOnTouchListener(touch);
+        ImageView l4 = (ImageView) findViewById(R.id.l4);
+        l4.setOnTouchListener(touch);
+        ImageView l3 = (ImageView) findViewById(R.id.l3);
+        l3.setOnTouchListener(touch);
+        ImageView l2 = (ImageView) findViewById(R.id.l2);
+        l2.setOnTouchListener(touch);
+        ImageView l1 = (ImageView) findViewById(R.id.l1);
+        l1.setOnTouchListener(touch);
+
+        ImageView r9 = (ImageView) findViewById(R.id.r9);
+        r9.setOnTouchListener(touch);
+        ImageView r8 = (ImageView) findViewById(R.id.r8);
+        r8.setOnTouchListener(touch);
+        ImageView r7 = (ImageView) findViewById(R.id.r7);
+        r7.setOnTouchListener(touch);
+        ImageView r6 = (ImageView) findViewById(R.id.r6);
+        r6.setOnTouchListener(touch);
+        ImageView r5 = (ImageView) findViewById(R.id.r5);
+        r5.setOnTouchListener(touch);
+        ImageView r4 = (ImageView) findViewById(R.id.r4);
+        r4.setOnTouchListener(touch);
+        ImageView r3 = (ImageView) findViewById(R.id.r3);
+        r3.setOnTouchListener(touch);
+        ImageView r2 = (ImageView) findViewById(R.id.r2);
+        r2.setOnTouchListener(touch);
+        ImageView r1 = (ImageView) findViewById(R.id.r1);
+        r1.setOnTouchListener(touch);
+
+        ImageView b9 = (ImageView) findViewById(R.id.b9);
+        b9.setOnTouchListener(touch);
+        ImageView b8 = (ImageView) findViewById(R.id.b8);
+        b8.setOnTouchListener(touch);
+        ImageView b7 = (ImageView) findViewById(R.id.b7);
+        b7.setOnTouchListener(touch);
+        ImageView b6 = (ImageView) findViewById(R.id.b6);
+        b6.setOnTouchListener(touch);
+        ImageView b5 = (ImageView) findViewById(R.id.b5);
+        b5.setOnTouchListener(touch);
+        ImageView b4 = (ImageView) findViewById(R.id.b4);
+        b4.setOnTouchListener(touch);
+        ImageView b3 = (ImageView) findViewById(R.id.b3);
+        b3.setOnTouchListener(touch);
+        ImageView b2 = (ImageView) findViewById(R.id.b2);
+        b2.setOnTouchListener(touch);
+        ImageView b1 = (ImageView) findViewById(R.id.b1);
+        b1.setOnTouchListener(touch);
+
+        ImageView d9 = (ImageView) findViewById(R.id.d9);
+        d9.setOnTouchListener(touch);
+        ImageView d8 = (ImageView) findViewById(R.id.d8);
+        d8.setOnTouchListener(touch);
+        ImageView d7 = (ImageView) findViewById(R.id.d7);
+        d7.setOnTouchListener(touch);
+        ImageView d6 = (ImageView) findViewById(R.id.d6);
+        d6.setOnTouchListener(touch);
+        ImageView d5 = (ImageView) findViewById(R.id.d5);
+        d5.setOnTouchListener(touch);
+        ImageView d4 = (ImageView) findViewById(R.id.d4);
+        d4.setOnTouchListener(touch);
+        ImageView d3 = (ImageView) findViewById(R.id.d3);
+        d3.setOnTouchListener(touch);
+        ImageView d2 = (ImageView) findViewById(R.id.d2);
+        d2.setOnTouchListener(touch);
+        ImageView d1 = (ImageView) findViewById(R.id.d1);
+        d1.setOnTouchListener(touch);
+
 
         main = (Button) findViewById(R.id.mainMenu);
         main.setOnClickListener(new View.OnClickListener() {
