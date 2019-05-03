@@ -10,8 +10,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.os.SystemClock;
+import android.os.Handler;
+import android.widget.TextView;
 
 public class PlayActivity extends AppCompatActivity{
+
+    TextView timer ;
+    long currentMillis, createTime, timeDiff = 0L ;
+    Handler handler;
+    int minutes, seconds, milliseconds;
 
     //gives cardinal direction of movement
     enum Direction{
@@ -69,6 +77,11 @@ public class PlayActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
+//        final TextView timer ;
+//        final long currentMillis, createTime, timeDiff = 0L ;
+//        final Handler handler;
+//        final int minutes, seconds, milliseconds;
+
         cube = new Cube();
         cube.scramble();
         refresh();
@@ -91,6 +104,22 @@ public class PlayActivity extends AppCompatActivity{
                 return false;
             }
         };
+        timer = (TextView) findViewById(R.id.timerText);
+        createTime = System.currentTimeMillis();
+        handler = new Handler();
+        handler.postDelayed(runnable, 0);
+//                         @Override
+//                         public void run() {
+//                             Long currentMillis = System.currentTimeMillis();
+//                             Long timeDiff = currentMillis - createTime;
+//                             int minutes = (int) (timeDiff / 36000);
+//                             timeDiff -= (minutes * 36000);
+//                             int seconds = (int) (timeDiff / 1000);
+//                             timeDiff -= (seconds * 1000);
+//                             int milliseconds = (int) timeDiff;
+//                             timer.setText
+//                         }
+//                     });
 
         //set touch listeners for all image views
         ImageView u9 = (ImageView) findViewById(R.id.u9);
@@ -216,6 +245,27 @@ public class PlayActivity extends AppCompatActivity{
             }
         });
     }
+
+    public Runnable runnable = new Runnable() {
+
+        public void run() {
+            currentMillis = System.currentTimeMillis();
+            timeDiff = currentMillis - createTime;
+            minutes = (int) timeDiff / 36000;
+            timeDiff -= (minutes * 36000);
+            seconds = (int) timeDiff / 1000;
+            timeDiff -= (seconds * 1000);
+            milliseconds = (int) timeDiff;
+            int centi = milliseconds / 10;
+            timer.setText("" + minutes + ":" + String.format("%02d", seconds) + ":"+ String.format("%02d", centi));
+
+
+            handler.postDelayed(this, 0);
+        }
+
+    };
+
+
 
     public void recolor(ImageView iv, char c)
     {
